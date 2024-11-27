@@ -1,0 +1,49 @@
+Banco de Dados Supermercado
+
+Este projeto envolve a criação de um banco de dados para um supermercado, chamado Supermercado. O banco de dados é projetado para gerenciar categorias de produtos, detalhes dos produtos e alterações históricas de preços. Os principais componentes do banco de dados incluem:
+
+Categoria: Uma tabela para armazenar as categorias de produtos, incluindo um identificador único, nome e descrição.
+Produto: Uma tabela para armazenar os detalhes dos produtos, incluindo um identificador único, nome, descrição, preço, quantidade em estoque e uma chave estrangeira referenciando a categoria.
+HistoricoPreco: Uma tabela para acompanhar as alterações históricas de preços dos produtos, incluindo um identificador único, ID do produto, preço anterior, preço atual e a data de alteração do preço.
+README.md
+markdown
+# Banco de Dados Supermercado  
+
+## Visão Geral  
+O Banco de Dados Supermercado é um banco de dados relacional projetado para gerenciar o estoque de um supermercado, incluindo categorias de produtos, detalhes dos produtos e informações sobre preços históricos.  
+
+## Tabelas  
+- **categoria**: Armazena as categorias de produtos.  
+  - `id`: Identificador único da categoria.  
+  - `nome`: Nome da categoria (único).  
+  - `descricao`: Descrição da categoria.  
+
+- **produto**: Armazena informações sobre os produtos.  
+  - `id`: Identificador único do produto.  
+  - `nome`: Nome do produto.  
+  - `descricao`: Descrição do produto.  
+  - `preco`: Preço atual do produto.  
+  - `quantidade_estoque`: Quantidade em estoque atual.  
+  - `id_categoria`: Chave estrangeira referenciando a categoria.  
+
+- **HistoricoPreco**: Acompanha as mudanças históricas de preços dos produtos.  
+  - `id`: Identificador único do registro de histórico de preços.  
+  - `id_produto`: Chave estrangeira referenciando o produto.  
+  - `preco_anterior`: Preço anterior do produto.  
+  - `preco_atual`: Preço atual do produto.  
+  - `data_alteracao`: Data e hora da alteração de preço.  
+
+## Iniciando  
+Para configurar o banco de dados:  
+
+1. Clone o repositório:  
+   ```bash  
+   git clone <url-do-repositorio>  
+   cd Supermercado  
+Crie o banco de dados:
+
+sql
+CREATE DATABASE Supermercado;  
+USE Supermercado;  
+Execute os scripts SQL para criar as tabelas e inserir dados iniciais.
+
