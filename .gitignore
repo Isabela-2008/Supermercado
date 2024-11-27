@@ -1,0 +1,25 @@
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE para mais detalhes.
+
+shell
+
+### .gitignore  
+Ignorar arquivos de banco de dados
+*.sql
+*.db
+
+Ignorar arquivos de log
+*.log
+
+Ignorar arquivos temporários
+*.tmp
+*.bak
+
+Ignorar arquivos de ambiente
+.env
+
+php
+
+### Notas  
+- Não se esqueça de substituir `<url-do-repositorio>` no README pela URL real do seu repositório Git.  
+- Ajuste a seção de licença no README de acordo com as necessidades de licenciamento do seu projeto.  
+- Certifique-se de que os comandos SQL em seu script para criação do banco de dados estejam corretos e consistentes com as definições das suas tabelas.  
