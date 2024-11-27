@@ -1,0 +1,45 @@
+create database Supermercado; 
+use Supermercado;
+
+create table if not exists categoria (
+id int auto_increment primary key,
+nome varchar(100) not null unique,
+descricao text
+);
+
+create table if not exists produto (
+id int auto_increment primary key,
+nome varchar(100),
+ descricao text,
+ preco float not null,
+ quantidade_estoque int not null default 0,
+ id_categoria int not null,
+ foreign key (id_categoria) references categoria (id)
+ );
+ 
+create table if not exists HistoricoPreco (
+ id int auto_increment primary key,
+ id_produto int not null,
+ preco_anterior float not null,
+ preco_atual float not null,
+ data_alteracao timestamp default current_timestamp,
+ foreign key (id_produto) references produto(id)
+ );
+ 
+
+ insert into categoria (nome, descricao) values 
+ ("a", "madura"),
+ ("b","geladas"),
+ ( "c", "com glutem");
+ 
+ insert into produtos (nome, descricao, preco, quantidadee_estoque, id_categoria) values
+ ("maca", "verde", 3.00, "100","1"),
+ ("agua", "com gas", 1.50, "100", "2"),
+ ("macarrao", "miojo",3.75, "100", "3");
+ 
+ insert into HistoricoPreco (id_produto, preco_anterior, preco_atual, data_alteracao) values
+ ("1", 2.00, 3.00, "27-11-24"),
+ ("2", 1.75, 1.50,"27-11-24"),
+ ("3", 4.00, 3.75,"27-11-24");
+ 
+ 
